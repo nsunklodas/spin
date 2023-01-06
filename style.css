@@ -1,0 +1,81 @@
+
+
+.box {
+    margin: 200px;
+}
+
+.box div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 200px;
+}
+
+.hover {
+    position: relative;
+    background: red;
+    
+}
+
+.box .hover .circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+}
+
+.box .always .circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+    animation-name: spin2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.always {
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+    background: green;
+}
+
+.box .hover:hover {
+    transition:10s ease-in;
+    transform: rotate(-4320deg);
+    border-radius: 50%;
+}
+
+.hover .circle:hover {
+    transition:5s ease-in;
+    transform: rotate(4320deg);
+    border-radius: 50%;
+    background: yellow;
+    width: 10px;
+    height: 10px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes spin2 {
+    100% {
+        transform: rotate(-1440deg);
+    }
+}
+    
